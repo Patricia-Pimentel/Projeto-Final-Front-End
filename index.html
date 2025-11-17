@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelMeow
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <header class="header">
+        <img class="banner-topo" src="img/banner.png" alt="Banner da PixelMeow">
+    </header>
+
+    <header class="header-fixo-container">
+        <div class="barra-inicio">
+            <div class="titulo-busca-container">
+                <div class="search-container">
+                    <form action="/caminho-da-busca" method="GET">
+                        <input type="text" id="search-box" name="q" placeholder="Buscar no site...">
+                        <button type="submit" id="search-button">Buscar</button>
+                    </form>
+                </div>
+                <a href="pages/cesta.html" class="cesta-link" id="cesta-link">
+                    <img src="img/cesta.png" alt="Ícone do Carrinho de Compras" class="icone-cesta">
+
+                    <span id="contador-cesta">0</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="header-nav-main">
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#produtos">Gatinhos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="main-content">
+
+        <section id="inicio">
+            <div class="container-imagem">
+                <img class="banner" src="img/Banner_promo.png" alt="Banner da promoção">
+
+                <div class="texto-sobreposto">
+                    <h2>Super Ofertas!</h2>
+                    <p>Venha conhecer nossa nova loja</p>
+                    <a href="#produtos" class="botao-promocao">ADOTE SEU GATINHO</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos">
+            <h1>Gatinhos</h1>
+            <div class="cards-container">
+
+                <!-- card gato preto-->
+
+                <div class="produtos-card" data-id="1" data-nome="Gato preto" data-preco="20.00"
+                    data-foto="../img/gato_preto.png" data-nome-produto="gato,preto,escuro">
+                    <a href="pages/gato_preto.html">
+                        <img src="img/gato_preto.png" alt="Foto de gato preto" class="produtos-foto">
+                    </a>
+                    <div class="produtos-info">
+                        <h3 class="produtos-name">Gato Preto</h3>
+                        <p class="produtos-bio">Estatueta 3D - Gato preto fofo</p>
+                        <p class="produtos-preco">R$ 20,00</p>
+                        <button type="button" class="btn-adicionar-cesta">Adote seu gatinho</button>
+                    </div>
+                </div>
+
+                <!-- card gato branco-->
+
+                <div class="produtos-card" data-id="2" data-nome="Gato Branco" data-preco="20.00"
+                    data-foto="../img/gato_branco.png" data-nome-produto="gato,branco,claro">
+                    <a href="pages/gato_branco.html">
+                        <img src="img/gato_branco.png" alt="Foto de gato branco" class="produtos-foto">
+                    </a>
+                    <div class="produtos-info">
+                        <h3 class="produtos-name">Gato Branco</h3>
+                        <p class="produtos-bio">Estatueta 3D - Gato Branco fofo</p>
+                        <p class="produtos-preco">R$ 20,00</p>
+                        <button type="button" class="btn-adicionar-cesta">Adote seu gatinho</button>
+                    </div>
+                </div>
+
+                <!-- card gato laranja-->
+
+                <div class="produtos-card" data-id="3" data-nome="Gato Laranja" data-preco="20.00"
+                    data-foto="../img/gato_laranja.png" data-nome-produto="gato,laranja,amarelo">
+                    <a href="pages/gato_laranja.html">
+                        <img src="img/gato_laranja.png" alt="Foto de gato laranja" class="produtos-foto">
+                    </a>
+                    <div class="produtos-info">
+                        <h3 class="produtos-name">Gato Laranja</h3>
+                        <p class="produtos-bio">Estatueta 3D - Gato Laranja fofo</p>
+                        <p class="produtos-preco">R$ 20,00</p>
+                        <button type="button" class="btn-adicionar-cesta">Adote seu gatinho</button>
+                    </div>
+                </div>
+
+                <!-- card gato siames-->
+
+                <div class="produtos-card" data-id="4" data-nome="Gato Siames" data-preco="20.00"
+                    data-foto="../img/gato_siames.png" data-nome-produto="gato,siames,claro">
+                    <a href="pages/gato_siames.html">
+                        <img src="img/gato_siames.png" alt="Foto de gato siames" class="produtos-foto">
+                    </a>
+                    <div class="produtos-info">
+                        <h3 class="produtos-name">Gato Siames</h3>
+                        <p class="produtos-bio">Estatueta 3D - Gato Siames fofo</p>
+                        <p class="produtos-preco">R$ 20,00</p>
+                        <button type="button" class="btn-adicionar-cesta">Adote seu gatinho</button>
+                    </div>
+                </div>
+
+                <!-- card gato frajola-->
+
+                <div class="produtos-card" data-id="5" data-nome="Gato Frajola" data-preco="20.00"
+                    data-foto="../img/gato_frajola.png" data-nome-produto="gato,frajola">
+                    <a href="pages/gato_frajola.html">
+                        <img src="img/gato_frajola.png" alt="Foto de gato frajola" class="produtos-foto">
+                    </a>
+                    <div class="produtos-info">
+                        <h3 class="produtos-name">Gato Frajola</h3>
+                        <p class="produtos-bio">Estatueta 3D - Gato Frajola fofo</p>
+                        <p class="produtos-preco">R$ 20,00</p>
+                        <button type="button" class="btn-adicionar-cesta">Adote seu gatinho</button>
+                    </div>
+                </div>
+
+                <!-- card gato tigrado-->
+
+                <div class="produtos-card" data-id="6" data-nome="Gato Tigrado" data-preco="20.00"
+                    data-foto="../img/gato_tigrado.png" data-nome-produto="gato,tigrado">
+                    <a href="pages/gato_tigrado.html">
+                        <img src="img/gato_tigrado.png" alt="Foto de gato tigrado" class="produtos-foto">
+                    </a>
+                    <div class="produtos-info">
+                        <h3 class="produtos-name">Gato Tigrado</h3>
+                        <p class="produtos-bio">Estatueta 3D - Gato Tigrado fofo</p>
+                        <p class="produtos-preco">R$ 20,00</p>
+                        <button type="button" class="btn-adicionar-cesta">Adote seu gatinho</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="sobre">
+
+            <h1>🐾 Bem-vindo à PixelMeow!</h1>
+            <div>
+                <p>
+                    Cansado de ter seus bichinhos fofos presos à tela? Na PixelMeow, nós transformamos a arte cativante
+                    do pixel art em algo que você pode tocar, colecionar e amar.
+
+                    Nossa loja é o lar de uma coleção única de gatinhos pixelados, cuidadosamente "adotados" e trazidos
+                    à vida através da tecnologia de impressão 3D de alta qualidade. Cada peça é uma celebração da
+                    estética retrô e da inegável fofura felina, resultando em miniaturas duráveis e cheias de charme.
+                </p>
+
+
+        </section>
+
+        <!-- contato -->
+        <section id="contato">
+            <h1>Contato</h1>
+
+            <form id="form-contato" action="processar-inscricao.php" method="POST">
+                <label for="name">Seu Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Seu E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit" id="btn-enviar">Enviar</button>
+            </form>
+        </section>
+
+        <!-- avaliação dos cliente -->
+
+        <section class="avaliacoes-clientes">
+            <h1>O que nossos clientes dizem</h1>
+
+            <div class="container-avaliacoes">
+
+                <div class="avaliacao-card">
+                    <div class="estrelas" data-rating="5">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                            class="star">★</span><span class="star">★</span>
+                    </div>
+                    <p class="comentario">O item perfeito para a minha estante! "Adotei o 'Siamês' e fiquei
+                        impressionado! A qualidade da impressão 3D é fantástica; você consegue ver cada pixel, mas ele é
+                        perfeitamente liso ao toque. Coloquei ele do lado do meu console e ele virou o mascote oficial
+                        das minhas gameplays. A entrega foi super rápida (no meu universo fictício, claro!) e o carinho
+                        na embalagem é notável. Já estou de olho no Gato Preto para a minha próxima adoção."</p>
+                    <p class="cliente">- Sicrano Santos, São Paulo</p>
+                </div>
+
+                <div class="avaliacao-card">
+                    <div class="estrelas" data-rating="4">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                            class="star">★</span><span class="star vazio">☆</span>
+                    </div>
+                    <p class="comentario">Eu não aguento a fofura desses gatinhos! Eles são exatamente como na
+                        descrição, com cores pastéis vibrantes e o charme retrô do pixel art. Comprei o 'Gato Tigrado'
+                        para o meu escritório e ele me arranca um sorriso toda vez que o vejo. É uma forma
+                        criativa de ter um gatinho por perto sem a bagunça! Se você procura um toque de nostalgia fofa e
+                        qualidade ímpar, a PixelMeow é o lugar certo.</p>
+                    <p class="cliente">- Beltrana Santos, Rio de Janeiro</p>
+                </div>
+
+                <div class="avaliacao-card">
+                    <div class="estrelas" data-rating="5">
+                        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                            class="star">★</span><span class="star">★</span>
+                    </div>
+                    <p class="comentario">"Sempre admirei pixel art, mas ter uma escultura física que representa isso é
+                        incrível. O conceito de 'Adote seu gatinho em 3D' é genial. O gatinho que adotei é robusto e tem
+                        um acabamento impecável, sem rebarbas. É a representação perfeita do slogan da loja. Já indiquei
+                        para todos os meus amigos designers e nerds. Parabéns à equipe PixelMeow!"</p>
+
+                    <p class="cliente">- Beltrano Oliveira, Belo Horizonte</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- rodape -->
+    <footer>
+
+        <div class="social-links">
+            <a target="_blank" aria-label="Acesse nosso Instagram"><img src="img/logo_instagran.png"
+                    alt="Logo do Instagram"></a>
+                        <a target="_blank" aria-label="Acesse nosso Facebook"><img src="img/logo_facebook.png"
+                    alt="Logo do Facebook"></a>
+                        <a target="_blank" aria-label="Fale conosco no WhatsApp"><img src="img/logo_whatsapp.png"
+                    alt="Logo do Whatsapp"></a>
+        </div>
+        <p>PixelMeow Ltda - CNPJ: 00.000.000/0000-00 - Endereço: Rua XYZ, 000 - Bairro,
+            Estado/XX - CEP 00.000-000</p>
+
+
+        <p>&copy; 2025 PixelMeow – Todos os direitos reservados. </p>
+    </footer>
+
+    <script src="main.js" defer></script>
+</body>
+
+</html>

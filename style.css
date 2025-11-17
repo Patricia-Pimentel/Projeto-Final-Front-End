@@ -1,0 +1,1066 @@
+@charset "UTF-8";
+
+/* --------------------
+   1. Configurações Globais e Reset
+   
+   -------------------- */
+
+/* --- cores principais----*/
+:root {
+    --cor-escura: #2e0455;
+    --cor-roxo: #b5b9ff;
+    --cor-azul: #afcbff;
+    --cor-rosa: #ffccf9;
+    --cor-verde: #b6ffce;
+    --cor-branco: #eef2f5;
+    --cor-preto: #01060a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- basico do body----*/
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--cor-escura);
+    background-color: var(--cor-branco);
+    background-image: url('img/fundo.png');
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------
+    2. Cabeçalho (Header) 
+    
+    -------------------- */
+/* banner */
+.header-banner,
+.header {
+    display: block;
+    top: 0;
+}
+
+.banner-topo {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 25rem;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    margin-top: 0;
+    /* garante que não tenha deslocamento */
+}
+
+/* Header principal */
+.header {
+
+    padding: 0;
+    box-shadow: none;
+    overflow: visible;
+    /* importante para o sticky funcionar */
+}
+
+/* Container que vai “grudar” após o banner */
+.header-fixo-container {
+    /* --- menu----*/
+    background-color: var(--cor-branco);
+    border-bottom: 3px solid var(--cor-escura);
+    box-shadow: 0 2px 5px var(--cor-roxo);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-top: 0;
+}
+
+/* --------------------
+    2.1 Header/ busca, cesta
+    
+    -------------------- */
+
+.barra-inicio {
+    background-color: var(--cor-branco);
+    padding: 10px 0px;
+    max-width: 10000px;
+    margin: 0 auto;
+
+}
+
+.titulo-busca-container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px 20px;
+    background-color: var(--cor-roxo);
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+
+/* --------------------
+    2.1.1 cesta
+    -------------------- */
+/* Estilo do Ícone do cesta no html */
+
+.icone-cesta {
+    width: 50px;
+    height: 50px;
+    /* deixa o ícone redondo */
+    border-radius: 30%;
+    object-fit: cover;
+    /* evita distorções */
+    background-color: var(--cor-verde);
+
+    padding: 3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* caixa da cesta */
+.cesta-link {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--cor-azul);
+    padding: 6px 10px;
+    /* aredonda  */
+    border-radius: 80px;
+    border: 1px solid var(--cor-rosa);
+    transition: all 0.3s ease;
+    box-shadow: var(--cor-escura);
+    text-decoration: none;
+}
+
+.cesta-link:hover {
+    background-color: var(--cor-verde);
+    filter: brightness(1.2);
+}
+
+.cesta-link:hover .icone-cesta {
+    filter: brightness(1);
+}
+
+#contador-cesta {
+    color: var(--cor-escura);
+    font-weight: bold;
+}
+
+.cesta-link:hover #contador-cesta {
+    color: var(--cor-escura);
+}
+
+/* --------------------
+    2.1.2 busca
+    -------------------- */
+
+.search-container {
+    margin: 5px auto;
+    width: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+}
+
+.search-container form {
+    display: flex;
+    align-items: stretch;
+    /* força input e botão a mesma altura */
+    border: 3px solid var(--cor-verde);
+    border-radius: 10px;
+    overflow: hidden;
+    /* mantém tudo dentro da borda arredondada */
+}
+
+#search-box {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: none;
+    /* remove borda própria */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* letra busca */
+#search-box::placeholder {
+    color: var(--cor-escura);
+}
+
+#search-button {
+    padding: 0 px;
+    border: none;
+    /* remove borda própria */
+    background-color: var(--cor-rosa);
+    color: var(--cor-escura);
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+#search-button:hover {
+    background-color: var(--cor-verde);
+    color: var(--cor-escura);
+}
+
+
+/* --------------------
+    2.1 Header/ navegação
+    
+    -------------------- */
+
+.header-nav-main {
+    padding: 0 20px;
+}
+
+.header-nav {
+    flex-grow: 1;
+    padding: 0;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--cor-escura);
+    font-weight: 600;
+    padding-bottom: 3px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.header-nav a:hover {
+    color: var(--cor-roxo);
+    border-bottom: 2px solid var(--cor-roxo);
+}
+
+
+/* --------------------
+    3. Seções e Conteúdo
+    
+    -------------------- */
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+/* estilo titulos (Inicio, Produtos, Sobre, Contato) */
+h1 {
+    font-size: 1.8em;
+    color: var(--cor-escura);
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: var(--cor-rosa);
+    padding: 5px 10px 5px 10px;
+    border-radius: 100px;
+
+
+}
+
+
+p {
+    margin-bottom: 15px;
+
+}
+
+#inicio {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* --------------------
+4. Seção promoção
+--------------------*/
+
+.container-imagem {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-imagem img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    /* mobile */
+    max-height: 500px;
+    /* desktop */
+    object-fit: cover;
+    /* corta a imagem se necessário sem deformar */
+    display: block;
+}
+
+.texto-sobreposto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cor-rosa);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 90%;
+}
+
+.botao-promocao {
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid var(--cor-rosa);
+    background-color: var(--cor-roxo);
+    color: var(--cor-verde);
+    transition: 0.3s;
+}
+
+.botao-promocao:hover {
+    background-color: var(--cor-azul);
+    color: var(--cor-verde);
+    border-color: var(--cor-verde);
+}
+
+.texto-sobreposto h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 6vw, 3rem);
+}
+
+.texto-sobreposto p {
+    margin: 0;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+
+/* --------------------
+5. Seção produtos
+--------------------*/
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+.produtos-card {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-rosa);
+    border-radius: 150px;
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--cor-verde);
+    text-align: center;
+    flex: 1 1 280px;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.produtos-card-pages {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-rosa);
+    border-radius: 150px;
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--cor-verde);
+    text-align: center;
+}
+
+
+.produtos-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid var(--cor-escura);
+}
+
+.produtos-name {
+    color: var(--cor-escura);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.produtos-bio {
+    color: var(--cor-escura);
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+.produtos-preco {
+    color: var(--cor-escura);
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+.produtos-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--cor-escura);
+    background-color: var(--cor-azul);
+
+}
+
+.produtos-card:hover .produtos-foto {
+    border-color: var(--cor-rosa);
+    transition: border-color 0.3s;
+}
+
+/* Estilo para o botão de envio */
+#produtos button[type="button"] {
+    display: block;
+    width: 50%;
+
+    padding: 12px 20px;
+    background-color: var(--cor-roxo);
+    color: var(--cor-verde);
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Efeito ao passar o mouse no botão */
+#produtos button[type="button"]:hover {
+    background-color: var(--cor-rosa);
+    color: var(--cor-azul);
+}
+
+/* --------------------
+    6. Sobre
+    -------------------- */
+
+#sobre div {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* centraliza o bloco na página */
+    background-color: var(--cor-rosa);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    /* centraliza o conteúdo interno */
+}
+
+#sobre div p {
+    line-height: 1.6;
+    max-width: 800px;
+    /* controla largura do texto */
+    margin: 0 auto;
+    /* centraliza o parágrafo */
+}
+
+/* --------------------
+    7. Contato
+    -------------------- */
+
+/* Estilos para a seção principal do formulário */
+#contato {
+    /* Centraliza o formulário */
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    /* Sombra */
+    box-shadow: 0 4px 10px var(--cor-rosa);
+    border-radius: 100px;
+    background-color: var(--cor-verde);
+}
+
+/* Estiliza os pares de Label e Input/Textarea para ficarem organizados */
+#contato label,
+#contato input[type="text"],
+#contato input[type="email"],
+#contato input[type="tel"],
+#contato textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Estiliza todos os campos de entrada de texto e área de texto */
+#contato input[type="text"],
+#contato input[type="email"],
+#contato input[type="tel"],
+#contato textarea {
+    padding: 10px;
+    border: 1px solid var(--cor-rosa);
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Efeito ao focar nos campos */
+#contato input:focus,
+#contato textarea:focus {
+    outline: none;
+    border-color: var(--cor-azul);
+    box-shadow: 0 0 5px var(--cor-rosa);
+}
+
+/* Estilo específico para a área de texto */
+#contato textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Estilo para o botão de envio */
+#contato button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--cor-azul);
+    color: var(--cor-escura);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse no botão */
+#contato button[type="submit"]:hover {
+    background-color: var(--cor-rosa);
+}
+
+
+/* --------------------
+    8. Avaliação
+    -------------------- */
+.avaliacoes-clientes {
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.avaliacoes-clientes h2 {
+    margin-bottom: 40px;
+    color: var(--cor-escura);
+    font-size: 2em;
+}
+
+/* Container para as avaliações - usa Flexbox para layout em colunas */
+.container-avaliacoes {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem a linha em telas pequenas */
+    gap: 30px;
+    /* Espaçamento entre os cards */
+    justify-content: center;
+    max-width: 1200px;
+    /* Largura máxima do container */
+    margin: 0 auto;
+}
+
+/* Estilo do Card de Avaliação Individual */
+.avaliacao-card {
+    background-color: var(--cor-verde);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--cor-escura);
+    flex: 1 1 300px;
+    min-width: 280px;
+    /* Garante um tamanho mínimo em telas muito pequenas */
+    transition: transform 0.3s ease;
+    border-radius: 100px;
+}
+
+.avaliacao-card:hover {
+    transform: translateY(-5px);
+    /* Efeito sutil ao passar o mouse */
+}
+
+/* Estilo das Estrelas */
+.estrelas {
+    color: var(--cor-escura);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+    /* Espaçamento entre as estrelas */
+    display: block;
+    /* Garante que as estrelas fiquem em sua própria linha */
+}
+
+.estrelas .star {
+    /* Estilos para a estrela preenchida (★) */
+    display: inline-block;
+}
+
+.estrelas .vazio {
+    /* Estilos para a estrela vazia (☆) */
+    color: var(--cor-rosa);
+}
+
+/* Estilo do Comentário */
+.comentario {
+    font-style: italic;
+    color: var(--cor-escura);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Estilo do Cliente */
+.cliente {
+    font-weight: bold;
+    color: var(--cor-escura);
+    margin-top: 10px;
+}
+
+
+/* --------------------
+    8. Rodapé (Footer) 
+    -------------------- */
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--cor-branco);
+    color: var(--cor-escura);
+}
+
+.social-links img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a:hover img {
+    opacity: 0.7;
+}
+
+
+
+/* --------------------
+   9 Carrinho html proprio
+    -------------------- */
+
+
+#cesta-area {
+    padding: 40px 10%;
+    /* Espaço interno da seção */
+    margin: 50px 0;
+    /* Espaço acima e abaixo da seção */
+    background-color: transparent;
+    min-height: 70vh;
+    text-align: center;
+}
+
+#cesta-area h1 {
+    color: var(--cor-escura);
+    margin-bottom: 40px;
+    /* Espaço entre o título e os cards */
+}
+
+#cesta-itens {
+    background-color: var(--cor-escura);
+    /* fundo branco */
+    padding: 20px;
+    /* espaço interno */
+    border-radius: 12px;
+    /* cantos arredondados */
+    box-shadow: var(--cor-rosa);
+    /* leve sombra */
+    margin-bottom: 30px;
+    /* espaço entre os itens e o resumo */
+    color: var(--cor-escura);
+}
+
+/* Cards de produtos no cesta */
+#cesta-itens .produtos-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    flex: 1 1 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--cor-verde);
+}
+
+#cesta-itens a {
+    color: var(--cor-escura);
+}
+
+/* Informações do produto */
+#cesta-itens .produtos-info {
+    flex-grow: 1;
+    color: var(--cor-escura);
+    padding-left: 10px;
+}
+
+#cesta-itens .produtos-foto {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-color: var(--cor-roxo);
+    
+}
+
+/* Resumo do cesta */
+.resumo-cesta {
+    max-width: 400px;
+    margin: 40px auto 0 auto;
+    /* Espaço acima do resumo */
+    padding: 20px;
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-azul);
+    border-radius: 12px;
+    color: var(--cor-azul);
+    text-align: center;
+    box-shadow: var(--cor-verde);
+}
+
+/* Título do resumo */
+.resumo-cesta h2 {
+    margin-bottom: 15px;
+    color: var(--cor-escura);
+}
+
+.resumo-cesta p {
+    margin: 10px 0;
+    color: var(--cor-escura);
+}
+
+.resumo-cesta button {
+    margin-top: 15px;
+    background-color: var(--cor-azul);
+    color: var(--cor-branco);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.resumo-cesta button:hover {
+    background-color: var(--cor-rosa);
+}
+
+/* Controle de quantidade e botão remover */
+.controle-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.controle-quantidade label {
+    font-weight: bold;
+    color: var(--cor-escura);
+}
+
+.input-quantidade {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid var(--cor-branco);
+    border-radius: 4px;
+    color: var(--cor-escura);
+}
+
+.btn-remover {
+    margin-left: 10px;
+    background-color: var(--cor-azul);
+    color: var(--cor-branco);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-remover:hover {
+    background-color: var(--cor-rosa);
+}
+
+/* Total do item */
+.preco-total-item {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--cor-escura);
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--cor-rosa);
+}
+
+/* Carrinho vazio */
+#cesta-vazio {
+    text-align: center;
+    padding: 20px;
+    color: var(--cor-escura);
+}
+
+#cesta-itens a {
+    color: var(--cor-escura);
+    text-decoration: underline;
+    /* opcional */
+}
+
+#cesta-itens a:hover {
+    color: var(--cor-escura);
+}
+
+
+/* Estilo específico para os itens do cesta */
+#cesta-itens {
+    background-color: var(--cor-verde);
+    padding: 20px;
+    border-radius: 50px;
+    /* cantos arredondados */
+    box-shadow: var(--cor-rosa);
+    /* opcional: sombra leve */
+}
+
+#cesta-itens .cesta-item {
+    background-color: var(--cor-branco); 
+    color: var(--cor-verde);
+    margin-bottom: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid var(--cor-verde);
+    border-radius: 5px;
+}
+
+
+/* --------------------
+    9. Responsividade (Desktop)
+    -------------------- */
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-nav ul {
+        flex-wrap: nowrap;
+    }
+
+    table {
+        display: table;
+    }
+
+    .container-avaliacoes {
+        flex-direction: column;
+        /* Empilha os cards verticalmente em telas pequenas */
+        gap: 20px;
+    }
+
+    .avaliacao-card {
+        flex: 1 1 100%;
+        /* Ocupa 100% da largura do container */
+        min-width: unset;
+    }
+
+    .titulo-busca-container {
+        flex-wrap: nowrap;
+        /* Voltar para layout lado a lado */
+        padding: 5px 50px;
+        /* Padding maior em desktop */
+        gap: 20px;
+    }
+
+    .barra-inicio h1 {
+        width: auto;
+        /* Ocupa apenas o espaço necessário */
+        text-align: left;
+        /* Alinhamento à esquerda */
+        font-size: 1.8em;
+        /* Tamanho da fonte original */
+    }
+
+    .search-container {
+        width: auto;
+        /* Ocupa apenas o espaço necessário */
+        max-width: 250px;
+        /* Limite de largura em desktop */
+        margin: 0;
+    }
+
+    .container-imagem img {
+        min-height: 400px;
+        /* banner maior que mobile */
+        max-height: 600px;
+        /* não cresce demais */
+    }
+
+
+    .texto-sobreposto {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--cor-clara);
+        text-align: center;
+        padding: 1rem;
+        border-radius: 5px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 90%;
+    }
+
+    .texto-sobreposto h2 {
+        margin: 0;
+        font-size: clamp(1.5rem, 6vw, 3rem);
+        /* min, responsive, max */
+    }
+
+    .texto-sobreposto p {
+        margin: 0;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+
+    #sobre div {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #sobre div p {
+        max-width: 65%;
+    }
+
+    .equipe-foto {
+        max-width: 35%;
+    }
+
+    .container-avaliacoes {
+        flex-direction: row;
+    }
+
+
+    .avaliacao-card {
+        flex: 1 1 300px;
+
+        min-width: unset;
+    }
+
+    #sobre div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 30px;
+        /* espaço maior entre texto e imagem */
+        justify-content: flex-start;
+        /* garante que texto e imagem fiquem lado a lado */
+    }
+
+    #sobre div p {
+        flex: 0 0 55%;
+        /* texto ocupa 55% da largura */
+        max-width: 55%;
+    }
+
+    .equipe-foto {
+        flex: 0 0 40%;
+        /* imagem ocupa 40% da largura */
+        max-width: 40%;
+        height: auto;
+        object-fit: cover;
+        /* mantém proporção da imagem */
+        border-radius: 8px;
+        max-height: 400px;
+        /* limite de altura */
+        width: auto;
+    }
+
+}
+
+@media (max-width: 767px) {
+    #sobre div {
+        flex-direction: column;
+        /* empilha texto e imagem */
+        align-items: center;
+        gap: 15px;
+    }
+
+    #sobre div p {
+        flex: 1 1 100%;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .equipe-foto {
+        flex: 1 1 80%;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Responsividade do Carrinho */
+@media (max-width: 600px) {
+    #cesta-itens .produtos-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    #cesta-itens .produtos-foto {
+        margin-bottom: 5px;
+    }
+
+    .resumo-cesta {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .controle-quantidade {
+        justify-content: center;
+    }
+}

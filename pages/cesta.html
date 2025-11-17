@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelMeow
+    </title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+
+    <header class="header">
+        <img class="banner-topo" src="img/banner.png" alt="Banner da PixelMeow">
+    </header>
+
+    <header class="header-fixo-container">
+        <div class="barra-inicio">
+            <div class="titulo-busca-container">
+                <div class="search-container">
+                    <form action="/caminho-da-busca" method="GET">
+                        <input type="text" id="search-box" name="q" placeholder="Buscar no site...">
+                        <button type="submit" id="search-button">Buscar</button>
+                    </form>
+                </div>
+                <a href="../pages/cesta.html" class="cesta-link" id="cesta-link">
+                    <img src="../img/cesta.png" alt="Ícone do Carrinho de Compras" class="icone-cesta">
+
+                    <span id="contador-cesta">0</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="header-nav-main">
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="../index.html#inicio">Inicio</a></li>
+                    <li><a href="../index.html#produtos">Produtos</a></li>
+                    <li><a href="../index.html#sobre">Sobre</a></li>
+                    <li><a href="../index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+
+        <section id="cesta-area">
+            <h1>Cesta de gatinhos</h1>
+
+            <div id="cesta-itens" class="cards-container">
+                <p id="cesta-vazio" style="text-align: center; padding: 20px;">
+                <div id="cesta-vazio">
+                    <a href="../index.html">Sua cesta está vazia. Volte para a página de gatinhos!</a>
+                </div>
+                </p>
+            </div>
+
+            <div class="resumo-cesta">
+                <h2>Resumo da adoção</h2>
+                <p>Quantidade total: <span id="quantidade-total">0</span></p>
+                <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
+                <p>Total: <span id="total-geral">R$ 0,00</span></p>
+                <button id="finalizar-compra">Finalizar Compra</button>
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="social-links">
+            <a target="_blank" aria-label="Acesse nosso Instagram"><img src="../img/logo_instagran.png"
+                    alt="Logo do Instagram"></a>
+            <a target="_blank" aria-label="Acesse nosso Facebook"><img src="../img/logo_facebook.png"
+                    alt="Logo do Facebook"></a>
+            <a target="_blank" aria-label="Fale conosco no WhatsApp"><img src="../img/logo_whatsapp.png"
+                    alt="Logo do Whatsapp"></a>
+        </div>
+        <p>PixelMeow Ltda - CNPJ: 00.000.000/0000-00 - Endereço: Rua XYZ, 000 - Bairro, Estado/XX - CEP 00.000-000</p>
+        <p>&copy; 2025 PixelMeow – Todos os direitos reservados. </p>
+    </footer>
+</body>
+
+<script src="../cesta.js" defer></script>
+<script src="../main.js" defer></script>
+
+
+</html>
